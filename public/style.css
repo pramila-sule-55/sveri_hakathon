@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Blurred Background Image */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center/cover; /* Change 'food.jpg' to your image */
+    filter: blur(6px); /* Blur effect */
+    z-index: -1; /* Keeps it behind the content */
+}
+
+/* Register Heading */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: azure;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Registration Form */
+form {
+    background: rgba(255, 255, 255, 0.2); /* Glass effect */
+    backdrop-filter: blur(10px); /* Extra blur inside form */
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Register Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4081;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff80ab;
+}
+
+/* Login Link */
+p {
+    margin-top: 15px;
+}
+
+a {
+    color: #1d074a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    form {
+        width: 90%;
+    }
+}
